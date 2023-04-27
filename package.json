@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.9"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
   }
 }
