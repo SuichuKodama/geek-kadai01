@@ -39,6 +39,9 @@ li {
 }
 
 /* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
 html:focus-within {
   scroll-behavior: smooth;
 }

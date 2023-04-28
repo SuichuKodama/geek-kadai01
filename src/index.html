@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link href="/assets/css/reset.css" rel="stylesheet">
   <link href="/assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.0/anime.min.js"></script>
   <script src="/assets/js/index.js" type="module" defer></script>
   <script src="/assets/js/anime.js" type="module" defer></script>
@@ -23,14 +25,33 @@
     <div class="inner">
       <img class="logo" src="/assets/img/hd-logo.svg" alt="">
       <div class="menu-list">
-        <a class="item" href="">ABOUT</a>
-        <a class="item" href="">COURSE</a>
-        <a class="item" href="">ACCESS</a>
-        <a class="item" href="">NEWS</a>
-        <a class="item" href="">CONTACT</a>
+        <a class="item" href="#about">ABOUT</a>
+        <a class="item" href="#course">COURSE</a>
+        <a class="item" href="#news">NEWS</a>
+        <a class="item" href="#access">ACCESS</a>
+        <a class="item" href="#contact">CONTACT</a>
       </div>
     </div>
   </header>
+  <div class="sp-menu-btn js-sp-menu">
+    <div class="inner-wrap">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="text">MENU</span>
+    </div>
+  </div>
+
+  <div class="sp-menu-box js-sp-menu-box">
+    <div class="list">
+    <a class="item js-sp-menu-item" href="#about">ABOUT</a>
+    <a class="item js-sp-menu-item" href="#course">COURSE</a>
+    <a class="item js-sp-menu-item" href="#news">NEWS</a>
+    <a class="item js-sp-menu-item" href="#access">ACCESS</a>
+    <a class="item js-sp-menu-item" href="#contact">CONTACT</a>
+    </div>
+  </div>
+
   <div class="hero">
     <h1 class="visuallyhidden">TOKYO CHEESE ACADEMY</h1>
     <img class="cloud01" src="/assets/img/main-img01.svg" alt="">
@@ -48,7 +69,8 @@
     <img class="cloud02" src="/assets/img/main-img02.svg" alt="">
     <img class="catch" src="/assets/img/hero-catch.svg" alt="">
   </div>
-  <section class="outline">
+
+  <section class="outline" id="about">
     <h2 class="visuallyhidden">ABOUT</h2>
     <div class="container">
       <div class="text-body">
@@ -60,7 +82,24 @@
       </div>
       <div class="img-body">
         <div class="title">ABOUT</div>
-        <img src="/assets/img/outline-img.svg" alt="" class="img">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
       </div>
     </div>
     <div class="line-set">
@@ -68,7 +107,7 @@
       <img src="/assets/img/line-top.svg" alt="" class="line2">
     </div>
   </section>
-  <section class="course">
+  <section class="course" id="course">
     <h2 class="visuallyhidden">COURSE</h2>
     <div class="container">
       <div class="sec-title">COURSE</div>
@@ -115,7 +154,7 @@
       </div>
     </div>
   </section>
-  <section class="news">
+  <section class="news" id="news">
     <div class="sec-title">NEWS</div>
     <div class="container">
       <img src="/assets/img/news-img01.svg" alt="" class="img">
@@ -196,7 +235,7 @@
       </div>
     </div>
   </section>
-  <section class="access">
+  <section class="access" id="access">
     <div class="sec-title">ACCESS</div>
     <div class="container">
       <div class="company-info">
@@ -224,14 +263,16 @@
           </div>
         </div>
       </div>
-      <img src="/assets/img/access_01.svg" alt="" class="map">
+      <div class="google-map">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3114771864566!2d139.70080821525846!3d35.66933178019702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa9e2e881%3A0x35396adb5ba7ce03!2z44K444O844K644Ki44Kr44OH44Of44O85p2x5Lqs!5e0!3m2!1sja!2sjp!4v1682706741236!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
     <div class="line-set">
       <img src="/assets/img/line-bottom.svg" alt="" class="line1">
       <img src="/assets/img/line-bottom.svg" alt="" class="line2">
     </div>
   </section>
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="container">
       <div class="lead-wrap">
         <div class="sec-title">CONTACT</div>
