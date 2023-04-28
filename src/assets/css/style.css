@@ -460,9 +460,19 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .outline .img-body .img {
-    margin-top: -40px;
+  .outline .img-body {
+    flex: auto;
+    width: 100%;
   }
+
+  .outline .img-body .swiper {
+    width: 100%;
+    max-width: 515px; 
+    height: calc((100vw - 20px) * 0.6525);
+    max-height: 363.63px;
+    margin-top: -30px;
+  }
+
   .outline .container {
     flex-direction: column-reverse;
   }
